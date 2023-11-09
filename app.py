@@ -33,19 +33,17 @@ def main():
     total_vitimas = df["vitimas"].sum()
     total_vitimas_fatais = df["vitimasfatais"].sum()
 
-    '''
-    <h1>Teste
-    '''
+
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.metric("Total Acidentes 🚀", total_acidentes)
+        st.metric("Total Acidentes 🚨", total_acidentes)
 
     with col2:
-        st.metric("Total vítimas 🐞", total_vitimas)
+        st.metric("Total Vítimas 🤕", total_vitimas)
 
     with col3:
-        st.metric("Total vítimas Fatais ⚙️", total_vitimas_fatais)
+        st.metric("Total Vítimas Fatais ⚰️", total_vitimas_fatais)
 
     fig = px.bar(clima, text=clima.values, color_discrete_sequence=["#FF4500"])
     fig.update_layout(title="Total de acidentes por Clima", title_x=0.1, showlegend=False)
